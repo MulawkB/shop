@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+            </style>
+    </head>
+<header class="center font-color">
     <div>
-        <h1> boutique fruits </h1>
+        <h1> Boutique Alimentaire </h1>
         <hr />
     </div>
 </header>
-<body>
-    <div id="produits">
-
-    </div>
-
-    <script src="shop.js"></script>
-</body>
-<footer>
+<body class="body">
     <div>
-        <span> mentions légales</span> <span> plan de site </span>
+        <div class="barre-recherche">
+            <p>Recherche</p>
+            <ul id="filtre">
+
+            <li class="liste-elements">
+                <a href="main" onclick="return false;"> > tous nos produits </a>
+            </li>
+            <li class="liste-elements">
+                <a href="fruit" onclick="return false;"> > fruits </a>
+            </li>
+            <li class="liste-elements">
+                <a href="legumes" onclick="return false;"> > légumes </a>
+            </li>
+            <li class="liste-elements">
+                <a href="industriel" onclick="return false;"> > nourriture industrielle</a>
+            </li>
+
+                <input class="search-bar"
+                 type="search" 
+                 placeholder="Rechercher" 
+                 oninput="filterByName(event)"
+                >
+            <br>
+                <input class="search-bar"
+                type="Prix" 
+                placeholder="Prix" 
+                oninput="filterByPrice(event)"
+               >
+            </ul>
+        </div>
+        <div>
+            <div id="produits">
+                
+            </div>
+        <div>
+    </div>
+    <script src="shop.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</body>
+<footer class="footer font-color">
+    <hr />
+    <div>
+        <a href="mentions-legales" onclick="return false;"> mentions légales</a> <a href="plan" onclick="return false;"> plan de site </a>
     </div>
 </footer>
 </html>
